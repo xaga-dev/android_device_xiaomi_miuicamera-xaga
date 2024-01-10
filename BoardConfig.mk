@@ -5,9 +5,9 @@
 #
 
 # Inherit from the proprietary version
-include vendor/xiaomi/miuicamera-lisa/BoardConfigVendor.mk
+include vendor/xiaomi/miuicamera-lisa/vendor/BoardConfigVendor.mk
 
-MIUICAMERA_PATH := device/xiaomi/miuicamera-lisa
+MIUICAMERA_PATH := vendor/xiaomi/miuicamera-lisa
 
 # Properties
 TARGET_SYSTEM_PROP += $(MIUICAMERA_PATH)/system.prop
