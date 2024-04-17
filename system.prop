@@ -7,3 +7,4 @@ persist.vendor.camera.privapp.list=com.android.camera
 
 # MiuiCamera
 ro.miui.notch=1
+ro.product.mod_device=_global
