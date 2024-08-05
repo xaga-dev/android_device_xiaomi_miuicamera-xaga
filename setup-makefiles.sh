@@ -9,7 +9,7 @@
 set -e
 
 DEVICE=vendor
-VENDOR=xiaomi/miuicamera-lisa
+VENDOR=xiaomi/miuicamera-xaga
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
