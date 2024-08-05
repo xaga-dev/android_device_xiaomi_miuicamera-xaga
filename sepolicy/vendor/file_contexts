@@ -1,3 +1,0 @@
-# Sensetime
-/vendor/etc/camera/camera_cnf.txt  u:object_r:vendor_xiaomi_camera_file:s0
-/vendor/etc/camera/st_license.lic  u:object_r:vendor_xiaomi_camera_file:s0
