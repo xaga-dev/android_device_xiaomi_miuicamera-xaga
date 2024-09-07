@@ -7,10 +7,6 @@
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/miuicamera-xaga/vendor/vendor-vendor.mk)
 
-# AIDL Interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V4-ndk
-
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries-xiaomi.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-xiaomi.txt
@@ -18,10 +14,6 @@ PRODUCT_COPY_FILES += \
 # Priv-app permission
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml
-
-# Shims
-PRODUCT_PACKAGES += \
-    libgui_shim_miuicamera
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
