@@ -67,6 +67,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libgui_shim_miuicamera.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim_miuicamera.so" "${2}"
             ;;
+        system/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V4-ndk.so" "android.hardware.graphics.common-V5-ndk.so" "${2}"
+            ;;
         *)
             return 1
             ;;
