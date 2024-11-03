@@ -201,6 +201,12 @@ android_app_import {
     name: "MiuiCamera",
     owner: "xiaomi/miuicamera-xaga",
     apk: "proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk",
+    overrides: [
+        "GoogleCamera",
+        "Camera2",
+        "Aperture",
+        "Flash",
+    ],
     certificate: "platform",
     dex_preopt: {
         enabled: false,
