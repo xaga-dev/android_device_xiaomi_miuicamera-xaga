@@ -1,18 +1,14 @@
 From 4a57d04971def4d844c9a20ffe570b18d5a297b5 Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
 Date: Sat, 26 Apr 2025 17:58:26 +0200
-Subject: [PATCH 2/4] CameraConstructCompat: Add Ultra HDR heic configurations
+Subject: [PATCH 2/5] CameraConstructCompat: Add Ultra HDR heic configurations
  to StreamConfigurationMap constructor
 
-Commit "Add HEIC_ULTRAHDR image format"[1] added three new parameters to
-the constructor of StreamConfigurationMap.
-Since HyperOS 2, xiaomi has added these methods but guarded them for sdk
-36 and above.
-Android 15 QPR2 (still sdk 35) added these methods already, so enforce
-the usage of the new constructor.
+Commit "Add HEIC_ULTRAHDR image format"[1] added three new parameters to the constructor of StreamConfigurationMap.
+Since HyperOS 2, xiaomi has added these methods but guarded them for sdk 36 and above.
+Android 15 QPR2 (still sdk 35) added these methods already, so enforce the usage of the new constructor.
 
-[1]:
-https://github.com/LineageOS/android_frameworks_base/commit/ba41b51131af923a797480a6e707d390d39852c2
+[1]: https://github.com/LineageOS/android_frameworks_base/commit/ba41b51131af923a797480a6e707d390d39852c2
 
 Change-Id: I884ba50a2f468060b841d464b6b9e33e846b45d5
 ---
