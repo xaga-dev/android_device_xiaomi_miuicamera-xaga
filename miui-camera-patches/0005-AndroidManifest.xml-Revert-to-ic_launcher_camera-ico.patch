@@ -1,7 +1,7 @@
-From 7fa580428202fd5a427459ad32cf2879a4fa5077 Mon Sep 17 00:00:00 2001
+From cf98d29e873a45a4c83a64192aff0f1f106fb547 Mon Sep 17 00:00:00 2001
 From: Alexander Winkowski <dereference23@outlook.com>
 Date: Thu, 18 Apr 2024 11:52:30 +0200
-Subject: [PATCH 5/5] AndroidManifest.xml: Revert to `ic_launcher_camera` icon
+Subject: [PATCH 5/8] AndroidManifest.xml: Revert to `ic_launcher_camera` icon
 
 Change-Id: Icd75f081fffa170171f3ae24687c79118e4d6603
 ---
@@ -9,7 +9,7 @@ Change-Id: Icd75f081fffa170171f3ae24687c79118e4d6603
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index ee2c9a06..0654403a 100644
+index ee2c9a0..0654403 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
 @@ -77,7 +77,7 @@
@@ -22,5 +22,5 @@ index ee2c9a06..0654403a 100644
          <meta-data android:name="miui.supportRequiredModifiable" android:value="true"/>
          <meta-data android:name="com.miui.bugreport.LOG_DIR" android:resource="@xml/log_paths"/>
 -- 
-2.51.1.dirty
+2.39.5
 

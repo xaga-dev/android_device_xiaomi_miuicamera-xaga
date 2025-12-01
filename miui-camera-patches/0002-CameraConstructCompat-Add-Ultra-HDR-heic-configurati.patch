@@ -1,7 +1,7 @@
-From 4a57d04971def4d844c9a20ffe570b18d5a297b5 Mon Sep 17 00:00:00 2001
+From a788f2ab5d1dd61b6a0658b38c3a3b539edffe4b Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
 Date: Sat, 26 Apr 2025 17:58:26 +0200
-Subject: [PATCH 2/5] CameraConstructCompat: Add Ultra HDR heic configurations
+Subject: [PATCH 2/8] CameraConstructCompat: Add Ultra HDR heic configurations
  to StreamConfigurationMap constructor
 
 Commit "Add HEIC_ULTRAHDR image format"[1] added three new parameters to the constructor of StreamConfigurationMap.
@@ -16,7 +16,7 @@ Change-Id: I884ba50a2f468060b841d464b6b9e33e846b45d5
  1 file changed, 50 insertions(+), 7 deletions(-)
 
 diff --git a/smali_classes4/com/xiaomi/compat/camera2/CameraConstructCompat.smali b/smali_classes4/com/xiaomi/compat/camera2/CameraConstructCompat.smali
-index 60420196..81114dcd 100644
+index 6042019..81114dc 100644
 --- a/smali_classes4/com/xiaomi/compat/camera2/CameraConstructCompat.smali
 +++ b/smali_classes4/com/xiaomi/compat/camera2/CameraConstructCompat.smali
 @@ -49,7 +49,7 @@
@@ -146,5 +146,5 @@ index 60420196..81114dcd 100644
  
      aput-object p0, v2, v19
 -- 
-2.51.1.dirty
+2.39.5
 

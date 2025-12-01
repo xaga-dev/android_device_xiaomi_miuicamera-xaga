@@ -1,0 +1,52 @@
+From 89745ac28e95ed9350513792535f714b0f80042f Mon Sep 17 00:00:00 2001
+From: Arian <arian.kulmer@web.de>
+Date: Wed, 16 Oct 2024 01:29:58 +0200
+Subject: [PATCH 7/8] Change com.android.camera.action.REVIEW to
+ android.provider.action.REVIEW
+
+This is the standard intent for review actions
+
+Change-Id: Ic5abe3c77a62ba12b387a47aaecbe924f71ab0b3
+---
+ smali_classes3/com/android/camera/GalleryHelper.smali | 4 ++--
+ smali_classes3/com/android/camera/Util.smali          | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/smali_classes3/com/android/camera/GalleryHelper.smali b/smali_classes3/com/android/camera/GalleryHelper.smali
+index 7ee70a3..c086200 100644
+--- a/smali_classes3/com/android/camera/GalleryHelper.smali
++++ b/smali_classes3/com/android/camera/GalleryHelper.smali
+@@ -553,7 +553,7 @@
+ 
+     move-result p0
+ 
+-    const-string v0, "com.android.camera.action.REVIEW"
++    const-string v0, "android.provider.action.REVIEW"
+ 
+     if-eqz p0, :cond_0
+ 
+@@ -594,7 +594,7 @@
+     :cond_1
+     const-string p0, "GalleryHelper"
+ 
+-    const-string p1, "gotoGallery: com.android.camera.action.REVIEW"
++    const-string p1, "gotoGallery: android.provider.action.REVIEW"
+ 
+     .line 7
+     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+diff --git a/smali_classes3/com/android/camera/Util.smali b/smali_classes3/com/android/camera/Util.smali
+index 431ec94..b5354c3 100644
+--- a/smali_classes3/com/android/camera/Util.smali
++++ b/smali_classes3/com/android/camera/Util.smali
+@@ -204,7 +204,7 @@
+ 
+ .field public static final REQUEST_CODE_OPEN_MIUI_EXTRA_PHOTO:I = 0x8c35
+ 
+-.field public static final REVIEW_ACTION:Ljava/lang/String; = "com.android.camera.action.REVIEW"
++.field public static final REVIEW_ACTION:Ljava/lang/String; = "android.provider.action.REVIEW"
+ 
+ .field public static final REVIEW_ACTION_IN_MULTI_WINDOW:Ljava/lang/String; = "com.android.camera.action.SPILIT_SCREEN_REVIEW"
+ 
+-- 
+2.39.5
+

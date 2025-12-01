@@ -1,0 +1,44 @@
+From abdb912ecb3081a2031497de3f65c3b0ef88ee27 Mon Sep 17 00:00:00 2001
+From: danielml <daniel@danielml.dev>
+Date: Fri, 19 Apr 2024 17:32:08 +0200
+Subject: [PATCH 8/8] Assume that mod_device is global
+
+Otherwise, the app tries to start a custom permissions dialog which
+has dependencies on HyperOS Security Center app
+
+Change-Id: I8962a6e409f5aa30f84fccd482fefe78767069c2
+Signed-off-by: danielml <daniel@danielml.dev>
+---
+ smali/OooO0O0/OooO0o/OooO00o/OooO0O0.smali | 2 +-
+ smali_classes5/miuix/os/Build.smali        | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/smali/OooO0O0/OooO0o/OooO00o/OooO0O0.smali b/smali/OooO0O0/OooO0o/OooO00o/OooO0O0.smali
+index 9fb9c0c..0216609 100644
+--- a/smali/OooO0O0/OooO0o/OooO00o/OooO0O0.smali
++++ b/smali/OooO0O0/OooO0o/OooO00o/OooO0O0.smali
+@@ -1173,7 +1173,7 @@
+ 
+     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+ 
+-    move-result v0
++    const/4 v0, 0x1
+ 
+     return v0
+ .end method
+diff --git a/smali_classes5/miuix/os/Build.smali b/smali_classes5/miuix/os/Build.smali
+index 3d23089..f845309 100644
+--- a/smali_classes5/miuix/os/Build.smali
++++ b/smali_classes5/miuix/os/Build.smali
+@@ -24,7 +24,7 @@
+ 
+     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+ 
+-    move-result v0
++    const/4 v0, 0x1
+ 
+     sput-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
+ 
+-- 
+2.39.5
+
