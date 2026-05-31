@@ -18,7 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'vendor/xiaomi/miuicamera-xaga',
+    'device/xiaomi/miuicamera-xaga',
 ]
 
 
@@ -46,9 +46,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'vendor',
-    'xiaomi/miuicamera-xaga',
-    device_rel_path='vendor/xiaomi/miuicamera-xaga',
+    'miuicamera-xaga',
+    'xiaomi',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,

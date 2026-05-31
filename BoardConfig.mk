@@ -4,10 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from the proprietary version
-include vendor/xiaomi/miuicamera-xaga/vendor/BoardConfigVendor.mk
+MIUICAMERA_PATH := device/xiaomi/miuicamera-xaga
 
-MIUICAMERA_PATH := vendor/xiaomi/miuicamera-xaga
+# Inherit from the proprietary version
+include vendor/xiaomi/miuicamera-xaga/BoardConfigVendor.mk
 
 # Properties
 TARGET_SYSTEM_PROP += $(MIUICAMERA_PATH)/system.prop
